@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Benny – Benefits Coordinator (Gen2)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font (optional, close to Figma style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top navigation bar -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="user-avatar">M</div>
+        <div class="user-info">
+          <div class="user-name">Michael</div>
+          <div class="user-status">
+            <span class="status-dot"></span>
+            <span>Active</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="settings-button" type="button">
+        Settings
+      </button>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Quick Actions</h2>
+
+      <div class="quick-actions">
+        <button class="quick-card">
+          <div class="quick-icon">⏰</div>
+          <div class="quick-content">
+            <div class="quick-title">Time Off Request</div>
+            <div class="quick-subtitle">Submit vacation or sick leave</div>
+          </div>
+        </button>
+
+        <button class="quick-card">
+          <div class="quick-icon">⚠️</div>
+          <div class="quick-content">
+            <div class="quick-title">Incident Report</div>
+            <div class="quick-subtitle">Report workplace incidents</div>
+          </div>
+        </button>
+
+        <button class="quick-card">
+          <div class="quick-icon">📄</div>
+          <div class="quick-content">
+            <div class="quick-title">Benefits Overview</div>
+            <div class="quick-subtitle">View your current benefits</div>
+          </div>
+        </button>
+
+        <button class="quick-card">
+          <div class="quick-icon">👥</div>
+          <div class="quick-content">
+            <div class="quick-title">HR Contacts</div>
+            <div class="quick-subtitle">Find department contacts</div>
+          </div>
+        </button>
+      </div>
+
+      <button class="logout-button">
+        <span class="logout-icon">↪</span>
+        <span>Log Out</span>
+      </button>
+    </aside>
+
+    <!-- RIGHT CHAT AREA -->
+    <main class="chat-wrapper">
+      <header class="chat-header">
+        <div class="chat-header-left">
+          <div class="avatar avatar-benny">B</div>
+          <div>
+            <div class="chat-title">Benny – Benefits Coordinator</div>
+            <div class="chat-subtitle">AI Assistant • Always available</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+          <!-- Benny message -->
+          <div class="message-row bot">
+            <div class="avatar avatar-benny-small">B</div>
+            <div class="message-bubble bot-bubble">
+              <p>
+                Hello Michael! I'm Benny, your Benefits Coordinator AI. Ask me anything
+                about your Prosper benefits and I'll get you an answer right away.
+              </p>
+              <span class="message-meta">2:30 PM</span>
+            </div>
+          </div>
+
+          <!-- User message -->
+          <div class="message-row user">
+            <div class="message-bubble user-bubble">
+              <p>Can you give me an email address to VA?</p>
+              <span class="message-meta">2:31 PM</span>
+            </div>
+            <div class="avatar avatar-user-small">M</div>
+          </div>
+
+          <!-- Benny message -->
+          <div class="message-row bot">
+            <div class="avatar avatar-benny-small">B</div>
+            <div class="message-bubble bot-bubble">
+              <p>
+                I'm sorry, but I can't provide specific email addresses. If you need to
+                contact the VA, please visit their official website for the appropriate
+                contact information.
+              </p>
+              <span class="message-meta">2:31 PM</span>
+            </div>
+          </div>
+
+          <!-- User message -->
+          <div class="message-row user">
+            <div class="message-bubble user-bubble">
+              <p>Can you give me an email address to Monitoring?</p>
+              <span class="message-meta">2:32 PM</span>
+            </div>
+            <div class="avatar avatar-user-small">M</div>
+          </div>
+        </div>
+
+        <!-- Input area (we'll wire this later) -->
+        <form class="chat-input" id="chat-form">
+          <input
+            type="text"
+            id="user-input"
+            class="chat-input-field"
+            placeholder="Type your question about your benefits..."
+            autocomplete="off"
+          />
+          <div class="chat-input-actions">
+            <button type="button" class="chat-mic-button">Mic</button>
+            <button type="submit" class="chat-send-button">Send</button>
+          </div>
+        </form>
+      </section>
+
+      <p class="chat-footer-note">
+        Benny can make mistakes. Please verify important information.
+      </p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
