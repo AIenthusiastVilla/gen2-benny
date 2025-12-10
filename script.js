@@ -30,3 +30,4 @@ if (form && input && messagesContainer) {
     input.value = "";
   });
 }
+///#sourceMappingURL=script.js.map
